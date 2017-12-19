@@ -1,0 +1,57 @@
+"----------------------vim-plug---------------------
+call plug#begin('~/.vim/vim-plug')
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'junegunn/limelight.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'ervandew/supertab'
+Plug 'jiangmiao/auto-pairs'
+Plug 'hotoo/pangu.vim'
+Plug 'godlygeek/tabular'
+Plug 'lilydjwg/colorizer'
+Plug 'terryma/vim-smooth-scroll'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'junegunn/vim-slash'
+Plug 'tpope/vim-repeat'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+call plug#end()
+
+
+"--------------------------airline---------------------
+let g:airline_powerline_fonts = 1
+
+"打开tabline功能
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+
+"设置切换Buffer快捷键"
+nnoremap <C-N> :bn<CR>
+nnoremap <C-P> :bp<CR>
+" vim-airline-themes
+let g:airline_theme='lucius'
+
+"--------------------------Goyo---------------------
+let g:goyo_width = 100
+let g:goyo_linenr = 0       " 显示行号
+
+"----------------------------indent-guide-------------------
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+
+"----------------------------vim-smooth-scroll-------------------
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+
+"----------------------------table-mode-------------------
+let g:table_mode_corner='|'      " For Markdown-compatible tables
+
+"--------------------------------------------------------------
+silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
