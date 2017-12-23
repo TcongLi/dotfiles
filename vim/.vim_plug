@@ -18,6 +18,7 @@ Plug 'junegunn/vim-slash'
 Plug 'tpope/vim-repeat'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
