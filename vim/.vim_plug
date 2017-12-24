@@ -60,3 +60,6 @@ let g:table_mode_corner='|'      " For Markdown-compatible tables
 
 "--------------------------------------------------------------
 silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
+
+"----------------------------ultisnips----------------------------
+let g:UltiSnipsJumpForwardTrigger="<tab>"
