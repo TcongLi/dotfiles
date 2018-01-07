@@ -3,7 +3,8 @@ set nocompatible
 set shortmess=atI
 " set mouse=a
 set number
-set numberwidth=7
+set numberwidth=6
+set relativenumber
 set wildmenu
 set gcr=a:blinkon0
 set clipboard=unnamed
