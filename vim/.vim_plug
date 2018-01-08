@@ -23,6 +23,14 @@ Plug 'tpope/vim-fugitive'
 Plug 'gregsexton/gitv', {'on': ['Gitv']}
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'easymotion/vim-easymotion'
+Plug 'dyng/ctrlsf.vim'
+Plug 'kshenoy/vim-signature'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-indent'
+Plug 'kana/vim-textobj-function'
+Plug 'reedes/vim-textobj-sentence'
 
 call plug#end()
 
@@ -63,3 +71,20 @@ silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 
 "----------------------------ultisnips----------------------------
 let g:UltiSnipsJumpForwardTrigger="<tab>"
+
+"----------------------------easy-motion----------------------------
+" let g:EasyMotion_do_mapping = 0
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map <Leader> <Plug>(easymotion-prefix)
+" map <Leader>l <Plug>(easymotion-lineforward)
+" map <Leader>j <Plug>(easymotion-j)
+" map <Leader>k <Plug>(easymotion-k)
+" map <Leader>h <Plug>(easymotion-linebackward)
+" Move to line
+map <Leader>j <Plug>(easymotion-bd-jk)
+nmap <Leader>j <Plug>(easymotion-overwin-line)
+" Move to word
+nnoremap  F f
+map  f <Plug>(easymotion-bd-w)
+nmap f <Plug>(easymotion-overwin-w)
