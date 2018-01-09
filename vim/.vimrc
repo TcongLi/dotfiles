@@ -59,7 +59,9 @@ vmap <C-j> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <C-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 "---------------COMMAND-------------------
-command Trim :%s/\s\+$//g
+" command Trim :%s/\s\+$//g
+cmap trim %s/\s\+$//g
+cmap w!! w !sudo tee >/dev/null %
 
 "---------------ENCODING------------------
 set encoding=utf-8
