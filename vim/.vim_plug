@@ -1,5 +1,9 @@
 "----------------------vim-plug---------------------
-call plug#begin('~/.vim/vim-plug')
+if has('win32')
+    call plug#begin('$HOME/vimfiles/vim-plug')
+else
+    call plug#begin('~/.vim/vim-plug')
+endif
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/limelight.vim'
@@ -74,18 +78,14 @@ silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 
 "----------------------------easy-motion----------------------------
-" let g:EasyMotion_do_mapping = 0
+map <Leader> <Plug>(easymotion-prefix)
+
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
-map <Leader> <Plug>(easymotion-prefix)
-" map <Leader>l <Plug>(easymotion-lineforward)
-" map <Leader>j <Plug>(easymotion-j)
-" map <Leader>k <Plug>(easymotion-k)
-" map <Leader>h <Plug>(easymotion-linebackward)
-" Move to line
+
 map <Leader>j <Plug>(easymotion-bd-jk)
 nmap <Leader>j <Plug>(easymotion-overwin-line)
-" Move to word
+
 nnoremap  F f
 map  f <Plug>(easymotion-bd-w)
 nmap f <Plug>(easymotion-overwin-w)

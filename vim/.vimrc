@@ -100,18 +100,23 @@ hi ExtraSpace ctermbg=236 ctermfg=NONE guibg=#333333
 if has('gui_running')
     set go=
     au GuiEnter * set t_vb=
-    set lines=32
-    set columns=132
-    autocmd GUIEnter * simalt ~x
-    set guifont=Fira_Code:h14
     set linespace=1
+
+    if has('win32')
+        " set lines=32
+        " set columns=132
+        autocmd GUIEnter * simalt ~x
+        set guifont=Fira_Code:h14
+        " DirectX rendering for Fira_Code ligatures
+        set renderoptions=type:directx,gamma:1.0,contrast:0.5,level:1,geom:1,renmode:4,taamode:1
+        " set shell=bash.exe
+    endif
+
+    if has('unix')
+        set guifont=Fira\ Code\ 14
+    endif
 endif
 
-if has('win32')
-    " DirectX rendering for Fira_Code ligatures
-    set renderoptions=type:directx,gamma:1.0,contrast:0.5,level:1,geom:1,renmode:4,taamode:1
-    set shell=bash.exe
-endif
 
 "---------------vim-plug------------------
 if has("win32")
