@@ -1,0 +1,12 @@
+--style=java
+--suffix=none
+--indent=spaces=4
+--pad-oper
+--pad-comma
+--pad-header
+--align-pointer=type
+--break-blocks
+--delete-empty-lines
+--break-one-line-headers
+--add-braces
+--max-code-length=80
