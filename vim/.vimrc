@@ -49,6 +49,8 @@ inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 
 nnoremap Y y$
+nnoremap H ^
+nnoremap L $
 
 nmap // gcc
 vmap // gc
