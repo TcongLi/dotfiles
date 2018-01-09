@@ -117,7 +117,6 @@ if has('gui_running')
     endif
 endif
 
-
 "---------------vim-plug------------------
 if has("win32")
     source $HOME/_vim_plug
