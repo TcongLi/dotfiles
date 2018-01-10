@@ -6,7 +6,6 @@
 --pad-header
 --align-pointer=type
 --break-blocks
---delete-empty-lines
 --break-one-line-headers
 --add-braces
 --max-code-length=80
