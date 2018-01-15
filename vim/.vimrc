@@ -40,6 +40,9 @@ set laststatus=2
 set statusline=%<%F%h%m%r\ [%{&ff}]\ (%{strftime(\"%H:%M\ %d/%m/%Y\",getftime(expand(\"%:p\")))})%=%l,%c%V\ %P
 
 "----------------MAP----------------------
+nnoremap j gj
+nnoremap k gk
+
 imap jk <ESC>
 imap kj <ESC>
 
